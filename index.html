@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <script src="https://code.jquery.com/jquery-3.7.1.slim.js" integrity="sha256-UgvvN8vBkgO0luPSUl2s8TIlOSYRoGFAX4jlCIm9Adc=" crossorigin="anonymous"></script>
+  <title>대쉬보드</title>
+</head>
+<body>
+
+  <header>
+    <div class="header">
+      <h1 class="header-h1">Platform</h1>
+      <ul class="header-menu">
+        <li class="header-li">광고주</li>
+        <li class="header-li">광고주1 님</li>
+        <li class="header-li have-sub">MY ▼
+          <ul class="header-sub-menu">
+            <li class="header-sub-menu-li">기본정보확인</li>
+            <li class="header-sub-menu-li">비밀번호변경</li>
+            <li class="header-sub-menu-li last">로그아웃</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <div class="main">
+      <nav class="side-bar">
+        <h2 class="side-h2">광고주 페이지</h2>
+        <ul class="side-ul">
+          <li class="side-li active">
+            <img class="side-img" src="images/board.png" alt="">
+            대시보드
+          </li>
+          <li class="side-li">
+            <img class="side-img" src="images/text.png" alt="">
+            미션관리
+          </li>
+          <li class="side-li">
+            <img class="side-img" src="images/report.png" alt="">
+            리포트
+          </li>
+        </ul>
+        <ul class="side-bt-ul">
+          <li class="side-bt-li">일자별</li>
+          <li class="side-bt-li last">미션별별</li>
+        </ul>
+      </nav>
+
+      <div class="content">
+        <div class="main-content-1">
+          <div class="main-filter-div">
+            <div class="t-div">
+              <div class="h-div">미션</div>
+              <div class="c-div">
+                <select class="t-select">
+                  <option value="all" selected>전체</option>
+                  <option value="1">옵션 1</option>
+                  <option value="2">옵션 2</option>
+                </select>
+              </div>
+            </div>
+            <div class="t-div">
+              <div class="h-div">파트너스</div>
+              <div class="c-div">
+                <select class="t-select">
+                  <option value="all" selected>전체</option>
+                  <option value="1">옵션 1</option>
+                  <option value="2">옵션 2</option>
+                </select>
+              </div>
+            </div>
+            <div class="t-div">
+              <div class="h-div">기간</div>
+              <div class="c-div">
+                <div class="data-div">
+                  <div class="date-input">
+                    <input type="text">
+                    <img src="./images/date.png" alt="">
+                  </div>
+                  ~
+                  <div class="date-input">
+                    <input type="text">
+                    <img src="./images/date.png" alt="">
+                  </div>
+                </div>
+                <div class="radio-div">
+                  <div class="radio-input">
+                    <input type="radio" id="today" name="day">
+                    <label for="today">당일</label>
+                  </div>
+                  <div class="radio-input">
+                    <input type="radio" id="yesterday" name="day">
+                    <label for="yesterday">어제</label>
+                  </div>
+                  <div class="radio-input">
+                    <input type="radio" id="week" name="day">
+                    <label for="week">일주일</label>
+                  </div>
+                  <div class="radio-input">
+                    <input type="radio" id="thirdDay" name="day">
+                    <label for="thirdDay">최근 30일</label>
+                  </div>
+                  <div class="radio-input">
+                    <input type="radio" id="beforeMonth" name="day">
+                    <label for="beforeMonth">전월</label>
+                  </div>
+                  <div class="radio-input">
+                    <input type="radio" id="bebeforeMonth" name="day">
+                    <label for="bebeforeMonth">전전월</label>
+                  </div>
+                  <div class="radio-input">
+                    <input type="radio" id="thirdMonth" name="day">
+                    <label for="thirdMonth">3개월</label>
+                  </div>
+                  <div class="radio-input">
+                    <input type="radio" id="sixMonth" name="day">
+                    <label for="sixMonth">6개월</label>
+                  </div>
+                  <div class="radio-input">
+                    <input type="radio" id="year" name="day">
+                    <label for="year">1년</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="t-div">
+              <div class="h-div">진행상태</div>
+              <div class="c-div">
+                <div class="status-div">
+                  <div class="checkbox-div">
+                    <input type="radio" name="status" id="status_all">
+                    <label for="status_all">전체</label>
+                  </div>
+                  <div class="checkbox-div">
+                    <input type="radio" name="status" id="status_activing">
+                    <label for="status_activing">진행중</label>
+                  </div>
+                  <div class="checkbox-div">
+                    <input type="radio" name="status" id="status_end">
+                    <label for="status_end">종료</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="t-div last">
+              <div class="h-div">검색어</div>
+              <div class="c-div">
+                <div class="search-input">
+                  <input type="text" placeholder="검색어를 입력하세요.">
+                  <img src="./images/search.png" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="filter-btn-g">
+            <button class="f-btn search">검색</button>
+            <button class="f-btn">초기화</button>
+          </div>
+        </div>
+
+        <div class="main-content-2">
+          <div class="main-cont-head">
+            <div class="head-title">
+              <p>총 9건 | 검색결과 5건</p>
+              <button class="default-btn excel">엑셀다운로드</button>
+            </div>
+            <div class="head-btn-group">
+              <select class="head-sel">
+                <option value="100">100개 보기</option>
+                <option value="50">50개 보기</option>
+                <option value="20">20개 보기</option>
+                <option value="10">10개 보기</option>
+              </select>
+              <button class="default-btn blue">미션등록</button>
+              <button class="default-btn excel">엑셀업로드</button>
+              <button class="default-btn red">일괄종료</button>
+              <button class="default-btn red">전송매체 일괄변경</button>
+            </div>
+          </div>
+
+          <div class="main-table">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th class="first" rowspan="2">선택</th>
+                  <th rowspan="2">번호</th>
+                  <th rowspan="2">썸네일</th>
+                  <th rowspan="2">업체명</th>
+                  <th class="parent" colspan="7">미션정보</th>
+                  <th rowspan="2">등록일</th>
+                  <th rowspan="2">종료일</th>
+                  <th rowspan="2">라이브시작일</th>
+                  <th rowspan="2">전송매체</th>
+                  <th rowspan="2">상태</th>
+                  <th class="last" rowspan="2">관리</th>
+                </tr>
+                <tr>
+                  <th>미션타입</th>
+                  <th>1일 참여수/<br/>1일참여제한<br/>횟수</th>
+                  <th>전체참여<br/>가능 수<br/>/미션 노출시간</th>
+                  <th>질문</th>
+                  <th>상품번호</th>
+                  <th>시퀀스번호</th>
+                  <th class="w-180">미션ID</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="first"><input type="checkbox"></td>
+                  <td>4</td>
+                  <td><img class="table-img" src="./images/map.png" alt=""></td>
+                  <td>패러글라이딩</td>
+                  <td>상품번호 복사<br/>new</td>
+                  <td><span class="red">500</span>/500</td>
+                  <td><span class="red">1000</span>/5000<br/>00:00 ~ 23:57</td>
+                  <td></td>
+                  <td>3423559018</td>
+                  <td>305585</td>
+                  <td>d2a39d94-1d95-4927-bd80-ebd9387fb278</td>
+                  <td>2024-05-08<br/>16:17:16</td>
+                  <td></td>
+                  <td>2024-05-08</td>
+                  <td>
+                    <p>OK캐시백</p>
+                    <p>P매체</p>
+                    <p>T대형매체</p>
+                    <p>크레페이</p>
+                    <p>OH</p>
+                    <p>하나머니</p>
+                    <p>A대형매체</p>
+                  </td>
+                  <td>
+                    진행중
+                  </td>
+                  <td>
+                    <button class="table-btn black">수정</button>
+                    <button class="table-btn black">미션일자별내역</button>
+                    <button class="table-btn black">미션참여내역</button>
+                    <button class="table-btn blue">재등록</button>
+                    <button class="table-btn last blue">종료+재등록</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="first"><input type="checkbox"></td>
+                  <td>3</td>
+                  <td><img class="table-img" src="./images/map.png" alt=""></td>
+                  <td>패러글라이딩</td>
+                  <td>상품번호 복사<br/>new</td>
+                  <td><span class="red">500</span>/500</td>
+                  <td><span class="red">1000</span>/5000<br/>00:00 ~ 23:57</td>
+                  <td></td>
+                  <td>3423559018</td>
+                  <td>305585</td>
+                  <td>d2a39d94-1d95-4927-bd80-ebd9387fb278</td>
+                  <td>2024-05-08<br/>16:17:16</td>
+                  <td></td>
+                  <td>2024-05-08</td>
+                  <td>
+                    <p>OK캐시백</p>
+                    <p>P매체</p>
+                    <p>T대형매체</p>
+                    <p>크레페이</p>
+                    <p>OH</p>
+                    <p>하나머니</p>
+                    <p>A대형매체</p>
+                  </td>
+                  <td>
+                    진행중
+                  </td>
+                  <td>
+                    <button class="table-btn black">수정</button>
+                    <button class="table-btn black">미션일자별내역</button>
+                    <button class="table-btn black">미션참여내역</button>
+                    <button class="table-btn blue">재등록</button>
+                    <button class="table-btn last blue">종료+재등록</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="first"><input type="checkbox"></td>
+                  <td>2</td>
+                  <td><img class="table-img" src="./images/map.png" alt=""></td>
+                  <td>패러글라이딩</td>
+                  <td>상품번호 복사<br/>new</td>
+                  <td><span class="red">500</span>/500</td>
+                  <td><span class="red">1000</span>/5000<br/>00:00 ~ 23:57</td>
+                  <td></td>
+                  <td>3423559018</td>
+                  <td>305585</td>
+                  <td>d2a39d94-1d95-4927-bd80-ebd9387fb278</td>
+                  <td>2024-05-08<br/>16:17:16</td>
+                  <td></td>
+                  <td>2024-05-08</td>
+                  <td>
+                    <p>OK캐시백</p>
+                    <p>P매체</p>
+                    <p>T대형매체</p>
+                    <p>크레페이</p>
+                    <p>OH</p>
+                    <p>하나머니</p>
+                    <p>A대형매체</p>
+                  </td>
+                  <td>
+                    진행중
+                  </td>
+                  <td>
+                    <button class="table-btn black">수정</button>
+                    <button class="table-btn black">미션일자별내역</button>
+                    <button class="table-btn black">미션참여내역</button>
+                    <button class="table-btn blue">재등록</button>
+                    <button class="table-btn last blue">종료+재등록</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="first"><input type="checkbox"></td>
+                  <td>1</td>
+                  <td><img class="table-img" src="./images/map.png" alt=""></td>
+                  <td>패러글라이딩</td>
+                  <td>상품번호 복사<br/>new</td>
+                  <td><span class="red">500</span>/500</td>
+                  <td><span class="red">1000</span>/5000<br/>00:00 ~ 23:57</td>
+                  <td></td>
+                  <td>3423559018</td>
+                  <td>305585</td>
+                  <td>d2a39d94-1d95-4927-bd80-ebd9387fb278</td>
+                  <td>2024-05-08<br/>16:17:16</td>
+                  <td></td>
+                  <td>2024-05-08</td>
+                  <td>
+                    <p>OK캐시백</p>
+                    <p>P매체</p>
+                    <p>T대형매체</p>
+                    <p>크레페이</p>
+                    <p>OH</p>
+                    <p>하나머니</p>
+                    <p>A대형매체</p>
+                  </td>
+                  <td>
+                    진행중
+                  </td>
+                  <td>
+                    <button class="table-btn black">수정</button>
+                    <button class="table-btn black">미션일자별내역</button>
+                    <button class="table-btn black">미션참여내역</button>
+                    <button class="table-btn blue">재등록</button>
+                    <button class="table-btn last blue">종료+재등록</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="pagenation-div">
+            <ul class="pagenation">
+              <li><a href="javascript:void(0)">&lt;</a></li>
+              <li><a class="active" href="javascript:void(0)">1</a></li>
+              <li><a href="javascript:void(0)">2</a></li>
+              <li><a href="javascript:void(0)">3</a></li>
+              <li><a href="javascript:void(0)">4</a></li>
+              <li><a href="javascript:void(0)">5</a></li>
+              <li><a href="javascript:void(0)">&gt;</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer></footer>
+  
+</body>
+</html>
