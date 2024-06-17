@@ -408,3 +408,23 @@ td p{
 .pagenation a.active{
   background-color: #d9d9d9;
 }
+.td-scroll{
+  max-height: 150px;
+  height: 100%;
+  overflow-y: scroll;
+}
+/* 스크롤바 전체 */
+.td-scroll::-webkit-scrollbar {
+  width: 4px; /* 스크롤바의 너비 */
+}
+
+/* 스크롤바의 트랙 */
+.td-scroll::-webkit-scrollbar-track {
+  background: #f1f1f1; /* 트랙의 배경색 */
+}
+
+/* 스크롤바의 핸들 */
+.td-scroll::-webkit-scrollbar-thumb {
+  background: #888; /* 핸들의 색상 */
+  border-radius: 10px; /* 핸들의 모서리를 둥글게 */
+}
